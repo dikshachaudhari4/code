@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Programme To find Days Of Month</title>
+	<script type="text/javascript">
+		function CountDay()
+		{
+			var month=document.getElementById("month").value;
+			if(month>12||month<1)
+				window.alert("Number Month Should be between 1 To 12");
+			else{
+				if(month%2==0&&month!=2&&month!=8)
+					document.getElementById("days").innerHTML="Days Of Month "+month+" : 30";
+				else if(month==2)
+					document.getElementById("days").innerHTML="Days Of Month "+month+" : 28";
+				else
+					document.getElementById("days").innerHTML="Days Of Month "+month+" : 31";
+				}
+		}
+	</script>
+</head>
+<body>
+<h1>Programme To find Days Of Month</h1>
+<br><br>
+<h4>Enter Number Of The Month</h4>
+<input id="month">
+<button type="button" onclick="CountDay()" id="btn">Get Days</button>
+<p id="days"></p>
+</body>
+</html>
